@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Register from './Register';
 import Login from './Login';
 import './App.css';
@@ -10,26 +10,17 @@ import { Route, Switch } from 'react-router-dom';
 //have state in your app - 
 
 //need to read up on how to render props inside a route component
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      currentUser: {}
-    }
-  }
-  getCurrentUser(data){
-    //store stuff in state 
-  }
-  render(){
+const My404 = () => {
+  return (
+    <div>
+      <h3>You are lost.</h3>
+    </div>
+  )
+}
 
-    const My404 = () => {
-      return (
-        <div>
-          <h3>You are lost.</h3>
-        </div>
-      )
-    }
 
+function App() {
+  
     return (
       <main>
         <Header />
@@ -42,7 +33,7 @@ class App extends Component {
       </main>
     );
   }
-}
+
   
 
 export default App;

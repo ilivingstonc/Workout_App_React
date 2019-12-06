@@ -156,6 +156,8 @@ class MainContainer extends Component {
               showEditModal: false,
               workouts: newWorkoutArrayWithEdit
             });
+
+            this.getWorkouts()
       
       
           } catch(err){
