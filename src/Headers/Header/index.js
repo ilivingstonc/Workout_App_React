@@ -8,7 +8,7 @@ const HeaderComponent = () => {
   return (
     <Navbar className="mainHeader" expand="lg" variant="light" bg="light">
       <Nav class="justify-content-start">
-        <Nav.Item className="navBrandTitle">Your Workouts</Nav.Item>
+        <Nav.Item className="navBrandTitle">Cycling Buddy</Nav.Item>
       </Nav>
       <Nav class="nav navbar-nav ml-auto w-100 justify-content-end">
           <Nav.Item className="navLogout">

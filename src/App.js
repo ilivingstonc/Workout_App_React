@@ -25,7 +25,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/login" component={ Login } />
-          <Route exact path="/login/register" component={ Register } />
+          <Route exact path="/register" component={ Register } />
           <Route path="/home" component={ MainContainer } />
           <Route component={ My404 } />
         </Switch>

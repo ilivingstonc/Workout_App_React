@@ -12,8 +12,10 @@ function WorkoutCard(props){
               <th>Created On</th>
               <th>Title</th>
               <th>Activity</th>
+              <th>Emphasis</th>
               <th>Duration</th>
               <th>Description</th>
+              <th>TSS Score</th>
               <th>Delete</th>
               <th>Edit</th>
             </tr>
@@ -23,8 +25,10 @@ function WorkoutCard(props){
               <td>{workout.created_at}</td>
               <td>{workout.title}</td>
               <td>{workout.activity}</td>
+              <td>{workout.emphasis}</td>
               <td>{workout.duration}</td>
               <td>{workout.description}</td>
+              <td>{workout.tss}</td>
               <td>
                 <Button className="workoutButton" onClick={() => props.deleteWorkout(workout.id)}>Delete</Button>
               </td>

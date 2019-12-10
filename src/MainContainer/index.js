@@ -18,8 +18,10 @@ class MainContainer extends Component {
             workoutToEdit: {
                 title: '',
                 activity: '',
+                emphasis: '',
                 duration: '',
                 description: '',
+                tss: '',
                 created_at: '',
                 id: ''
             },
@@ -184,6 +186,8 @@ class MainContainer extends Component {
               <Row>
                 <Col>
                   <CreateWorkout addWorkout={this.addWorkout}/>
+                </Col>
+                <Col>
                   <EditWorkout handleEditChange={this.handleEditChange} open={this.state.showEditModal} workoutToEdit={this.state.workoutToEdit} closeAndEdit={this.closeAndEdit}/>
                 </Col>
               </Row>
