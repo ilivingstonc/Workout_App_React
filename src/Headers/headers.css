@@ -1,0 +1,16 @@
+.mainHeader, .loginHeader, .registerHeader {
+    margin: 15px;
+}
+
+
+.navLogout {
+    margin: 20px;
+    font-size: 150%;
+}
+
+.navBrandTitle {
+    margin: 20px;
+    font-size: 250%;
+    width: 100%;
+
+}

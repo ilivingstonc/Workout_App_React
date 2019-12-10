@@ -1,9 +1,9 @@
 import React from 'react';
-import Register from './Register';
-import Login from './Login';
+import Register from './Logins/Register';
+import Login from './Logins/Login';
 import './App.css';
 import MainContainer from './MainContainer';
-import Header from './Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Switch } from 'react-router-dom';
 
 //need state to store current user's name, current userId
@@ -23,11 +23,10 @@ function App() {
   
     return (
       <main>
-        <Header />
         <Switch>
-          <Route exact path="/" component={ Register } />
           <Route exact path="/login" component={ Login } />
-          <Route exact path="/workouts" component={ MainContainer } />
+          <Route exact path="/login/register" component={ Register } />
+          <Route path="/home" component={ MainContainer } />
           <Route component={ My404 } />
         </Switch>
       </main>

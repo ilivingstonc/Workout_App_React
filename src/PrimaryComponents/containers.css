@@ -1,0 +1,49 @@
+
+.createCard {
+    width: auto;
+    padding: 20px;
+}
+
+.createButton {
+    margin: 10px;
+    height: 20%%;
+}
+
+.createHeader {
+    font-size: 150%;
+}
+
+.createForm {
+    margin-top: 10px;
+}
+
+.createCardTitle {
+    margin: 10px;
+}
+
+.workoutCard {
+    width: 250px;
+    text-align: center;
+}
+
+.workoutTitleHeader {
+    margin: 5px;
+}
+
+.workoutTimeHeader {
+    margin: 5px;
+}
+
+.workoutTitle {
+    margin: 5px;
+}
+
+.workoutText {
+    margin: 5px;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.workoutButton, .editButton {
+    margin: 5px;
+}

@@ -1,0 +1,8 @@
+.loginForm, .registerForm {
+    max-width: 40%;
+    margin: 15px;
+}
+
+.loginsButtons {
+    margin: 10px
+}

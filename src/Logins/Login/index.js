@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Form, Label, Button, Message } from 'semantic-ui-react';
+// import { Form, Label, Button, Message } from 'semantic-ui-react';
+import { Form, Button, Alert, Container } from 'react-bootstrap';
+import HeaderLogin from '../../Headers/HeaderLogin'
+import '../logins.css'
 
 class Login extends Component {
   constructor() {
@@ -36,7 +39,7 @@ class Login extends Component {
   
     if (parsedResponse.status.code === 200) {
       console.log('Sign up successful');
-      this.props.history.push('/workouts'); // Change url to /workouts programmatically with react-router
+      this.props.history.push('/home'); // Change url to /workouts programmatically with react-router
     } else {
       // Else display error message to the user
       this.setState({
@@ -47,15 +50,18 @@ class Login extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <h4>Sign In</h4>
-        <Label>Email</Label>
-        <Form.Input type="email" name="email" onChange={this.handleChange} required />
-        <Label>Password</Label>
-        <Form.Input type="password" name="password" onChange={this.handleChange} required />
-        <Button type="submit" color="green">Login</Button>
-        { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null }
-      </Form>
+      <Container>
+        <HeaderLogin />
+        <Form className="loginForm" onSubmit={this.handleSubmit}>
+          <h4>Sign In</h4>
+          <Form.Label>Email</Form.Label>
+          <Form.Control size="lg" type="email" name="email" onChange={this.handleChange} required />
+          <Form.Label>Password</Form.Label>
+          <Form.Control size="lg" type="password" name="password" onChange={this.handleChange} required />
+          <Button className="loginsButtons" type="submit" color="green">Login</Button>
+          { this.state.errorMsg ? <Alert negative>{this.state.errorMsg}</Alert> : null }
+        </Form>
+      </Container>
     )
   }
 }

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import WorkoutCard from '../WorkoutCard';
-import CreateWorkout from '../CreateWorkout';
-import { Grid } from 'semantic-ui-react';
-import EditWorkout from '../EditWorkout';
+import WorkoutCard from '../PrimaryComponents/WorkoutCard';
+import CreateWorkout from '../PrimaryComponents/CreateWorkout';
+import EditWorkout from '../PrimaryComponents/EditWorkout';
+import './style.css'
+
+
+import {  Row, Col } from 'react-bootstrap';
+import HeaderComponent from '../Headers/Header';
 
 
 class MainContainer extends Component {
@@ -15,7 +19,8 @@ class MainContainer extends Component {
                 title: '',
                 activity: '',
                 duration: '',
-                perceived_effort: '',
+                description: '',
+                created_at: '',
                 id: ''
             },
             showEditModal: false
@@ -67,7 +72,7 @@ class MainContainer extends Component {
           // the new workout which is called parsedResponse.data
     
           if (parsedResponse.status.code === 201) {
-            this.setState({workouts: [...this.state.workouts, parsedResponse.data]});
+            this.setState({workouts: [parsedResponse.data, ...this.state.workouts]});
           } else {
             alert(parsedResponse.status.message);
           }
@@ -169,17 +174,25 @@ class MainContainer extends Component {
         
         render(){
         return (
-          <Grid columns={2} divided textAlign='center' style={{ height: '100%' }} verticalAlign='top' stackable>
-            <Grid.Row>
-              <Grid.Column>
-                <WorkoutCard workouts={this.state.workouts} deleteWorkout={this.deleteWorkout} openAndEdit={this.openAndEdit}/>
-              </Grid.Column>
-              <Grid.Column>
-               <CreateWorkout addWorkout={this.addWorkout}/>
-              </Grid.Column>
-              <EditWorkout handleEditChange={this.handleEditChange} open={this.state.showEditModal} workoutToEdit={this.state.workoutToEdit} closeAndEdit={this.closeAndEdit}/>
-            </Grid.Row>
-          </Grid>
+          
+          <div className="mainContainer">
+              <Row>
+                <Col >
+                  <HeaderComponent />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <CreateWorkout addWorkout={this.addWorkout}/>
+                  <EditWorkout handleEditChange={this.handleEditChange} open={this.state.showEditModal} workoutToEdit={this.state.workoutToEdit} closeAndEdit={this.closeAndEdit}/>
+                </Col>
+              </Row>
+              <Row>
+                <Col >
+                  <WorkoutCard workouts={this.state.workouts} deleteWorkout={this.deleteWorkout} openAndEdit={this.openAndEdit}/>
+                </Col>
+              </Row>
+          </div>
           )
       }
     }

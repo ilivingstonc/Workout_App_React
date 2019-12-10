@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { Form, Label, Button, Message } from 'semantic-ui-react';
+// import { Form, Label, Button, Message } from 'semantic-ui-react';
+import { Form, Button, Alert, Container } from 'react-bootstrap';
+import HeaderRegister from '../../Headers/HeaderRegister'
+import '../logins.css'
 
 class Register extends Component {
   constructor() {
@@ -36,7 +39,7 @@ class Register extends Component {
   
     if (parsedResponse.status.code === 201) {
       console.log('Sign up successful');
-      this.props.history.push('/workouts'); // Change url to /workouts programmatically with react-router
+      this.props.history.push('/home'); // Change url to /workouts programmatically with react-router
     } else {
       // Else display error message to the user
       this.setState({
@@ -47,15 +50,18 @@ class Register extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <h4>Register New User</h4>
-        <Label>Email</Label>
-        <Form.Input type="email" name="email" onChange={this.handleChange} required />
-        <Label>Password</Label>
-        <Form.Input type="password" name="password" onChange={this.handleChange} required />
-        <Button type="submit" color="green">Sign Up</Button>
-        { this.state.errorMsg ? <Message negative>{this.state.errorMsg}</Message> : null }
-      </Form>
+      <Container>
+        <HeaderRegister />
+        <Form className="registerForm" onSubmit={this.handleSubmit}>
+          <h4>Create New Account</h4>
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" name="email" onChange={this.handleChange} required />
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" name="password" onChange={this.handleChange} required />
+          <Button className="loginsButtons" type="submit" color="green">Sign Up</Button>
+          { this.state.errorMsg ? <Alert negative>{this.state.errorMsg}</Alert> : null }
+        </Form>
+      </Container>
     )
   }
 }
