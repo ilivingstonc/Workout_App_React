@@ -192,7 +192,8 @@ class MainContainer extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col >
+                <Col>
+                  <h1>your workouts</h1>
                   <WorkoutCard workouts={this.state.workouts} deleteWorkout={this.deleteWorkout} openAndEdit={this.openAndEdit}/>
                 </Col>
               </Row>

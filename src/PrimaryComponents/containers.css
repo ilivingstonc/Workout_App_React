@@ -1,8 +1,4 @@
 
-.createContainer {
-
-}
-
 .createForm {
 
     padding: 20px;
@@ -44,6 +40,7 @@
     border-width: 5px;
 }
 
-.workoutButton, .editButton {
-    margin: 5px;
+.workoutEditButton, .workoutDeleteButton {
+   margin: 5px;
+
 }
