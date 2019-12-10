@@ -1,21 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {  Navbar, Nav } from 'react-bootstrap';
+import {  Navbar, Dropdown } from 'react-bootstrap';
 import '../headers.css'
 
 const HeaderComponent = () => {
 
   return (
-    <Navbar className="mainHeader" expand="lg" variant="light" bg="light">
-      <Nav class="justify-content-start">
-        <Nav.Item className="navBrandTitle">Cycling Buddy</Nav.Item>
-      </Nav>
-      <Nav class="nav navbar-nav ml-auto w-100 justify-content-end">
-          <Nav.Item className="navLogout">
-            <Link to="/login">Log Out</Link>  
-          </Nav.Item> 
-      </Nav>
-    </Navbar>
+      <Navbar bg="light" expand="lg" className="justify-content-end">
+      <Navbar.Brand>BIKEBUDDY</Navbar.Brand>
+        <Dropdown inline>
+          <Dropdown.Toggle>Menu</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item className="navDropdown">
+              <Link to="/home">Home</Link>
+              </Dropdown.Item>
+              <Dropdown.Item className="navDropdown">
+              <Link to="/login">Log Out</Link></Dropdown.Item>
+              </Dropdown.Menu>
+        </Dropdown>
+      </Navbar>
   )
 }
 
