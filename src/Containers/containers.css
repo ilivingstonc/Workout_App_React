@@ -1,0 +1,9 @@
+.mainContainer, .workoutContainer, h1 {
+    font-family: 'Audiowide', cursive;
+}
+
+
+.introCard {
+    margin: 10px;
+    padding: 10px;
+}

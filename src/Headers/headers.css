@@ -1,7 +1,13 @@
+
+
 .mainHeader, .loginHeader, .registerHeader {
     margin: 15px;
+    font-family: 'Audiowide', cursive;
 }
 
+.brandHeader.navbar-brand {
+    font-size: 250%;
+}
 
 .navLogout {
     margin: 20px;

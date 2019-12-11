@@ -12,6 +12,9 @@ const EditWorkout = (props) => {
       <Modal.Body>
         <Form className="editForm" onSubmit={props.closeAndEdit}>
 
+        <Form.Label className="editFormLabel">date</Form.Label>
+          <Form.Control type='date' name='date' value={props.workoutToEdit.date} onChange={props.handleEditChange}/>
+
           <Form.Label className="editFormLabel">Title:</Form.Label>
           <Form.Control type='text' name='title' value={props.workoutToEdit.title} onChange={props.handleEditChange}/>
 
@@ -26,8 +29,8 @@ const EditWorkout = (props) => {
             <option>Other</option>
           </Form.Control>
 
-          <Form.Label className="editFormLabel">Emphasis:</Form.Label>
-          <Form.Control as='select' name='emphasis' value={props.workoutToEdit.emphasis} onChange={props.handleEditChange}>
+          <Form.Label className="editFormLabel">Intensity/Zone:</Form.Label>
+          <Form.Control as='select' name='intensity' value={props.workoutToEdit.intensity} onChange={props.handleEditChange}>
               <option>Recovery (Z1)</option>
               <option>Endurance (Z2)</option>
               <option>Tempo (Z3)</option>

@@ -1,6 +1,8 @@
-.loginForm, .registerForm {
+.loginForm, .registerForm, h4 {
     max-width: 40%;
     margin: 15px;
+    font-family: 'Audiowide', cursive;
+
 }
 
 .loginsButtons {

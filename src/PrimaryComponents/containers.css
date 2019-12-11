@@ -1,3 +1,10 @@
+.createContainer {
+    margin: 10px;
+}
+
+.createCard {
+    padding: 10px;
+}
 
 .createForm {
 
@@ -41,6 +48,6 @@
 }
 
 .workoutEditButton, .workoutDeleteButton {
-   margin: 5px;
+   margin: 2px;
 
 }
