@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Form, Label, Button, Message } from 'semantic-ui-react';
 import { Form, Button, Alert, Container } from 'react-bootstrap';
 import HeaderRegister from '../../Headers/HeaderRegister'
 import '../logins.css'
@@ -39,7 +38,7 @@ class Register extends Component {
   
     if (parsedResponse.status.code === 201) {
       console.log('Sign up successful');
-      this.props.history.push('/home'); // Change url to /workouts programmatically with react-router
+      this.props.history.push('/home'); // Change url to /home programmatically with react-router
     } else {
       // Else display error message to the user
       this.setState({

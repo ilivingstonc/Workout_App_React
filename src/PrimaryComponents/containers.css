@@ -1,23 +1,26 @@
+.createContainer {
+    margin: 10px;
+}
 
 .createCard {
-    width: auto;
+    padding: 10px;
+}
+
+.createForm {
+
     padding: 20px;
 }
 
 .createButton {
     margin: 10px;
-    height: 20%%;
+    height: 20%;
 }
 
-.createHeader {
+.createLabel {
     font-size: 150%;
 }
 
-.createForm {
-    margin-top: 10px;
-}
-
-.createCardTitle {
+.createFormTitle {
     margin: 10px;
 }
 
@@ -44,6 +47,7 @@
     border-width: 5px;
 }
 
-.workoutButton, .editButton {
-    margin: 5px;
+.workoutEditButton, .workoutDeleteButton {
+   margin: 2px;
+
 }

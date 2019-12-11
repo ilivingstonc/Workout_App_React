@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
-import WorkoutCard from '../PrimaryComponents/WorkoutCard';
-import CreateWorkout from '../PrimaryComponents/CreateWorkout';
-import EditWorkout from '../PrimaryComponents/EditWorkout';
-import './style.css'
+
+import HeaderComponent from '../../Headers/Header'
+import WorkoutCard from '../../PrimaryComponents/WorkoutCard'
+import EditWorkout from '../../PrimaryComponents/EditWorkout'
+
+import {  Row, Col, Container } from 'react-bootstrap';
 
 
-import {  Row, Col } from 'react-bootstrap';
-import HeaderComponent from '../Headers/Header';
-
-
-class MainContainer extends Component {
+class WorkoutContainer extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             workouts: [],
             workoutToEdit: {
+                date: '',
                 title: '',
                 activity: '',
+                intensity: '',
                 duration: '',
                 description: '',
-                created_at: '',
+                tss: '',
                 id: ''
             },
             showEditModal: false
         }
     }
+
     componentDidMount(){
         this.getWorkouts();
       }
@@ -39,51 +39,13 @@ class MainContainer extends Component {
           const parsedWorkouts = await workouts.json();
           // console.log(parsedWorkouts);
           this.setState({
-            workouts: parsedWorkouts.data
+            workouts: parsedWorkouts.data.reverse()
           })
         } catch(err){
           console.log(err);
         }
       }
-      addWorkout = async (e, workout) => {
-        // .bind arguments take presidence over every other argument
-        e.preventDefault();
-        // console.log(workout);
-    
-        try {
-    
-          //  send JSON
-          // createdWorkout variable will store the response from the express API
-          const createdWorkoutResponse = await fetch(process.env.REACT_APP_API_URL + '/api/v1/workouts/', {
-            method: 'POST',
-            credentials: 'include',
-            body: JSON.stringify(workout),
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          });
-    
-          // we have to turn the response from flask into
-          // an object we can use
-          const parsedResponse = await createdWorkoutResponse.json();
-          console.log(parsedResponse, ' this is response')
-          // we are emptying all the workouts that are living in state into a new array,
-          // and then adding the workout we just created to the end of it
-          // the new workout which is called parsedResponse.data
-    
-          if (parsedResponse.status.code === 201) {
-            this.setState({workouts: [parsedResponse.data, ...this.state.workouts]});
-          } else {
-            alert(parsedResponse.status.message);
-          }
-        } catch(err){
-          // Will be reached if CORS fails, ERR_CONNECT_FAILED or invalid JSON response
-          console.log('error')
-          console.log(err)
-        }
-        // request address will start with 'http://localhost:9000'
-        // becuase after we create it, we want to add it to the workouts array
-      }
+
       deleteWorkout = async (id) => {
     
         console.log(id)
@@ -171,30 +133,30 @@ class MainContainer extends Component {
       
       
         }
-        
-        render(){
+
+    render(){
         return (
-          
-          <div className="mainContainer">
-              <Row>
+            <Container className="workoutContainer">
+                <Row>
                 <Col >
-                  <HeaderComponent />
+                    <HeaderComponent />
                 </Col>
-              </Row>
-              <Row>
+                </Row>
+                <Row>
                 <Col>
-                  <CreateWorkout addWorkout={this.addWorkout}/>
-                  <EditWorkout handleEditChange={this.handleEditChange} open={this.state.showEditModal} workoutToEdit={this.state.workoutToEdit} closeAndEdit={this.closeAndEdit}/>
+                    <EditWorkout handleEditChange={this.handleEditChange} open={this.state.showEditModal} workoutToEdit={this.state.workoutToEdit} closeAndEdit={this.closeAndEdit}/>
                 </Col>
-              </Row>
-              <Row>
-                <Col >
-                  <WorkoutCard workouts={this.state.workouts} deleteWorkout={this.deleteWorkout} openAndEdit={this.openAndEdit}/>
+                </Row>
+                <Row>
+                <Col>
+                    <h1>your workouts</h1>
+                    <WorkoutCard className="workoutTable" workouts={this.state.workouts} deleteWorkout={this.deleteWorkout} openAndEdit={this.openAndEdit}/>
                 </Col>
-              </Row>
-          </div>
-          )
-      }
+                </Row>
+            </Container>
+
+        )
     }
-    
-    export default MainContainer
+}
+
+export default WorkoutContainer;

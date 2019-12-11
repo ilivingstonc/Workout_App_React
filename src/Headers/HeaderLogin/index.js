@@ -10,7 +10,7 @@ const HeaderLogin = () => {
     <Nav className="loginHeader">
        
         <Nav.Item>
-          <Link to="/login/register">New? Register Here</Link>
+          <Link to="/register">New? Register Here</Link>
         </Nav.Item>
       
     </Nav>

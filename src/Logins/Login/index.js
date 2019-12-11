@@ -25,7 +25,7 @@ class Login extends Component {
   // Submission of login form
   handleSubmit = async (e) => {
     e.preventDefault();
-    const loginUrl = `${process.env.REACT_APP_API_URL}/api/v1/user/login`; // localhost:8000/api/v1/user/register
+    const loginUrl = `${process.env.REACT_APP_API_URL}/api/v1/user/login`; 
     const loginResponse = await fetch(loginUrl, {
       method: 'POST',
       body: JSON.stringify(this.state),
@@ -58,7 +58,7 @@ class Login extends Component {
           <Form.Control size="lg" type="email" name="email" onChange={this.handleChange} required />
           <Form.Label>Password</Form.Label>
           <Form.Control size="lg" type="password" name="password" onChange={this.handleChange} required />
-          <Button className="loginsButtons" type="submit" color="green">Login</Button>
+          <Button className="loginsButtons" type="submit">Login</Button>
           { this.state.errorMsg ? <Alert negative>{this.state.errorMsg}</Alert> : null }
         </Form>
       </Container>
