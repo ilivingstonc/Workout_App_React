@@ -93,17 +93,16 @@ class MainContainer extends Component {
                     <Card.Text>Choose an activity-type that best describes your workout.</Card.Text>
 
                     <Card.Title>Intensity/Zones</Card.Title>
-                    <Card.Text>Select the level of intensity that best describes your workout. Higher intensity workouts may yield
-                    be more efficient for time-crunched cyclists, but are also more likely to lead to overtraining or injuries.</Card.Text>
+                    <Card.Text>Select the level of intensity that best describes your workout. Higher intensity workouts may
+                    yield good results for time-crunched athletes, but are also more likely to lead to overtraining or injuries
+                    if recovery time isn't considered.</Card.Text>
                     
                     <Card.Title>Duration</Card.Title>
-                    <Card.Text>Duration, more commonly referred to as volume, is the amount of time you spend training. High volume work is generally
-                    better for building a strong aerobic base and resilience. Volume is more commonly the focus early in the season, while intensity
-                    may be a bigger focus after the base-building period.</Card.Text>
+                    <Card.Text>Enter a workout duration. Higher volume rides (2.5+ hours) are generally
+                    better for building a strong aerobic base and resilience while recovery and high intensity work may be shorter in duration (30-90min).</Card.Text>
                     
                     <Card.Title>Description</Card.Title>
-                    <Card.Text>Log how you felt on your workout in detail. Looking back on this section may give you insights. For example, if
-                    you're frequently commenting on knee pain, you may want to consider visiting a bike fitting specialist.</Card.Text>
+                    <Card.Text>Details about your workout. Looking back on this section may give you insights or help you notice patterns</Card.Text>
                     
                     <Card.Title>TSS Score</Card.Title>
                     <Card.Text>TSS, also known as your Training Stress Score, is an indicator of how much stress your body is being exposed to through
