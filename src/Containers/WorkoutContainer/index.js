@@ -39,7 +39,7 @@ class WorkoutContainer extends Component {
           const parsedWorkouts = await workouts.json();
           // console.log(parsedWorkouts);
           this.setState({
-            workouts: parsedWorkouts.data
+            workouts: parsedWorkouts.data.reverse()
           })
         } catch(err){
           console.log(err);
