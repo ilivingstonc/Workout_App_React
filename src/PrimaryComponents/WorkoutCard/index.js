@@ -1,15 +1,18 @@
 import React from 'react';
-import { Table, Button} from 'react-bootstrap';
+import { Table, Button, ButtonGroup, Container, Card} from 'react-bootstrap';
+import '../containers.css'
 
 
 function WorkoutCard(props){
 
   const workouts = props.workouts.map((workout) => {
     return (
+      <Container>
+      <Card className="tableCard">
         <Table striped bordered hover variant="dark" responsive="xl" key={workout.id}>
           <thead>
             <tr>
-              <th>Date</th>
+              <th>Date of Workout</th>
               <th>Title</th>
               <th>Activity</th>
               <th>Intensity/Zone</th>
@@ -30,12 +33,14 @@ function WorkoutCard(props){
               <td>{workout.description}</td>
               <td>{workout.tss}</td>
             </tr>
-            <tr>
-                <Button variant="warning" className="workoutEditButton" onClick={() => props.openAndEdit(workout)}>Edit</Button>
-                <Button variant="danger" className="workoutDeleteButton"  onClick={() => props.deleteWorkout(workout.id)}>Delete</Button>
-            </tr>
           </tbody>
         </Table>
+          <ButtonGroup className="workoutButtons">
+            <Button variant="warning" onClick={() => props.openAndEdit(workout)}>Edit</Button>
+            <Button variant="danger" onClick={() => props.deleteWorkout(workout.id)}>Delete</Button>
+          </ButtonGroup>
+        </Card>
+        </Container>
         )
   })
 

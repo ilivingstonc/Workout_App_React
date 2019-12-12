@@ -74,6 +74,7 @@ class MainContainer extends Component {
           
                 <Col>
                   <Card className="introCard">
+                    
                     <Card.Header>
                       <Card.Title>BIKEBUDDY is here to help you train smarter</Card.Title>
                     </Card.Header>
@@ -92,28 +93,24 @@ class MainContainer extends Component {
                     <Card.Text>Choose an activity-type that best describes your workout.</Card.Text>
 
                     <Card.Title>Intensity/Zones</Card.Title>
-                    <Card.Text>Select the level of intensity that best describes your workout. Basing your training on power or heartrate zones 
-                    is one of the most effective ways to bring focus to your training. Remember that higher intensity workouts can yield
-                    faster training adaptation, but can also lead to overtraining without proper recovery periods.</Card.Text>
+                    <Card.Text>Select the level of intensity that best describes your workout. Higher intensity workouts may yield
+                    be more efficient for time-crunched cyclists, but are also more likely to lead to overtraining or injuries.</Card.Text>
                     
                     <Card.Title>Duration</Card.Title>
-                    <Card.Text>Duration, more commonly referred to as volume. High-volume workouts should generally be done in intensity zones 1-3. Workouts in zones 5-7
-                    should involve less volume. High volume is generally described as base-training, which builds your aerobic capacity and resilience 
-                    for the higher-intensity work that typically follows a base-building period.</Card.Text>
+                    <Card.Text>Duration, more commonly referred to as volume, is the amount of time you spend training. High volume work is generally
+                    better for building a strong aerobic base and resilience. Volume is more commonly the focus early in the season, while intensity
+                    may be a bigger focus after the base-building period.</Card.Text>
                     
                     <Card.Title>Description</Card.Title>
-                    <Card.Text>Log how you felt on your workout. Looking back on this section may give you insights. For example, if
-                    you're frequently commenting on knee pain, you may want to consider getting a professional bike-fitting. 
-                    If you're frequently feeling overly depleted from your longer rides, you may want to increase your 
-                    weekly volume while decreasing the number of interval workouts in a given week</Card.Text>
+                    <Card.Text>Log how you felt on your workout in detail. Looking back on this section may give you insights. For example, if
+                    you're frequently commenting on knee pain, you may want to consider visiting a bike fitting specialist.</Card.Text>
                     
                     <Card.Title>TSS Score</Card.Title>
-                    <Card.Text>TSS, also known as your Training Stress Score is an important metric taken from your 
-                    volume and intensity. Training stress should be accumulated gradually to increase fitness while minimizing the risk of overtraining
-                    and injury. Your TSS can be calculated if you use a power meter and cycling computer. One hour at
-                    a rider's Function Threshold Power (FTP) is the equivelant of a TSS score of 100. </Card.Text>
+                    <Card.Text>TSS, also known as your Training Stress Score, is an indicator of how much stress your body is being exposed to through
+                      training. Your TSS for the previous seven days should increase gradually to maximize training benefits while preventing overtraining and injury.
+                    </Card.Text>
                     
-                    <Button href="/myworkouts">My Workouts</Button>
+                    <Button href="/myworkouts">View Workouts</Button>
                   </Card>
                 </Col>
               </Row>

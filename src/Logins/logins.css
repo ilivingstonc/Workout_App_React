@@ -2,9 +2,13 @@
     max-width: 40%;
     margin: 15px;
     font-family: 'Audiowide', cursive;
-
+    background-color: #d2d2d2;
+    color: #a31621;
+    border-style: inset;
 }
 
 .loginsButtons {
     margin: 10px
 }
+
+

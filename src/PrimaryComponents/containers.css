@@ -1,13 +1,18 @@
-.createContainer {
+div.createContainer.container {
     margin: 10px;
+    background-color: #b2b2b2;
 }
 
-.createCard {
+label.createForm.form-label, label.createLabel.form-label{
+    color: 	#a31621;
+}
+
+div.createCard.card {
     padding: 10px;
+    background-color: #d2d2d2;
 }
 
 .createForm {
-
     padding: 20px;
 }
 
@@ -24,30 +29,18 @@
     margin: 10px;
 }
 
-.workoutCard {
-    width: 250px;
-    text-align: center;
+.workoutButtons {
+    background-color: rgb(63, 59, 59);
+    max-width: 25%;
+    padding: 5px 10px;
 }
 
-.workoutTitleHeader {
-    margin: 5px;
+.tableCard.card {
+    background-color: rgb(0, 0, 0);
+    margin: 15px 0px;
 }
 
-.workoutTimeHeader {
-    margin: 5px;
+nav.justify-content-end.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: yellow;
 }
 
-.workoutTitle {
-    margin: 5px;
-}
-
-.workoutText {
-    margin: 5px;
-    border-style: solid;
-    border-width: 5px;
-}
-
-.workoutEditButton, .workoutDeleteButton {
-   margin: 2px;
-
-}

@@ -2,8 +2,21 @@
     font-family: 'Audiowide', cursive;
 }
 
+div.introCard.card {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #d2d2d2;
+    color: #031d44;
+    
+}
 
-.introCard {
-    margin: 10px;
-    padding: 10px;
+
+div.card-title.h5 {
+    color: #a31621;
+
+}
+
+h1 {
+    color: #a31621;
+    background-color: #d2d2d2;
 }
