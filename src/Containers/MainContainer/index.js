@@ -44,7 +44,7 @@ class MainContainer extends Component {
           // the new workout which is called parsedResponse.data
     
           if (parsedResponse.status.code === 201) {
-            this.setState({workouts: [parsedResponse.data, ...this.state.workouts]});
+            this.setState({workouts: [...this.state.workouts, parsedResponse.data]});
           } else {
             alert(parsedResponse.status.message);
           }
